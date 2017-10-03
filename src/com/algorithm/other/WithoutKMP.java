@@ -2,9 +2,6 @@ package com.algorithm.other;
 
 import java.util.Scanner;
 
-/**
- * Created by Ethan on 2017/9/3.
- */
 public class WithoutKMP {
     //查找子串的位置
     public static void main(String[] args) {

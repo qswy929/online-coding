@@ -3,23 +3,24 @@ package com.algorithm.other;
 import java.util.*;
 
 //前序和中序，构造树；并且层次遍历
-public class Tree_pre_in {    public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    int len = Integer.valueOf(sc.nextLine());
-    int i;
-    int[] pre = new int[len];
-    int[] in = new int[len];
-    String[] s = sc.nextLine().split(" ");
-    for(i=0;i<len;i++) {
-        pre[i] = Integer.valueOf(s[i]);
+public class Tree_pre_in {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int len = Integer.valueOf(sc.nextLine());
+        int i;
+        int[] pre = new int[len];
+        int[] in = new int[len];
+        String[] s = sc.nextLine().split(" ");
+        for(i=0;i<len;i++) {
+            pre[i] = Integer.valueOf(s[i]);
+        }
+        s = sc.nextLine().split(" ");
+        for(i=0;i<len;i++) {
+            in[i] = Integer.valueOf(s[i]);
+        }
+        TreeNode t = reConstructBinaryTree(pre, in);
+       print(t);
     }
-    s = sc.nextLine().split(" ");
-    for(i=0;i<len;i++) {
-        in[i] = Integer.valueOf(s[i]);
-    }
-    TreeNode t = reConstructBinaryTree(pre, in);
-    print(t);
-}
 
     //根据前序和中序构造二叉树
     public static TreeNode reConstructBinaryTree(int [] pre,int [] in) {
